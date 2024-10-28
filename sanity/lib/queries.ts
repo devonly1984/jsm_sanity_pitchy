@@ -16,7 +16,7 @@ export const STARTUP_QUERY = defineQuery(`
     description,
     category,
     image,
-  
+   
 
     }
     `);
@@ -29,6 +29,7 @@ export const STARTUP_BY_ID_QUERY = defineQuery(`
     author -> {
     _id,
     name,
+    username,
     image,
     bio
     },
