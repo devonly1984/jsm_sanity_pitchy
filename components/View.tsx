@@ -1,6 +1,6 @@
 import Ping from './Ping'
 import {client} from '@/sanity/lib/client'
-import { STARTUP_VIEWS_QUERY } from '@/sanity/lib/queries';
+import { STARTUP_VIEWS_QUERY } from '@/sanity/lib/queries/startupQuery';
 import { Writeclient } from '@/sanity/lib/writeClient';
 import { unstable_after as after } from 'next/server';
 

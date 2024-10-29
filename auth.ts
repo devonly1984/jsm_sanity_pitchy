@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import GitHub from "next-auth/providers/github";
 import { client } from "./sanity/lib/client";
-import { AUTHOR_BY_GITHUB_ID_QUERY } from "./sanity/lib/queries";
+import { AUTHOR_BY_GITHUB_ID_QUERY } from "./sanity/lib/queries/userQuery";
 import { Writeclient } from "./sanity/lib/writeClient";
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [GitHub],
