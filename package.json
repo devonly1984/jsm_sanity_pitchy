@@ -7,26 +7,30 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "shadadd": "npx shadcn add",
+    "shadadd": "npx --legacy-peer-deps shadcn add",
     "predev": "npm run typegen",
     "prebuild": "npm run typegen",
     "typegen": "sanity schema extract --path=./sanity/extract.json && sanity typegen generate"
   },
   "packageManager": "npm@10.9.0",
   "overrides": {
-    "react": "$react",
-    "react-dom": "$react-dom"
+    "react": "19.0.0-rc-69d4b800-20241021",
+    "react-dom": "19.0.0-rc-69d4b800-20241021"
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.0",
     "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-toast": "^1.2.2",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.62.2",
     "@tailwindcss/typography": "^0.5.15",
+    "@uiw/react-md-editor": "^4.0.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "easymde": "^2.18.0",
     "lucide-react": "^0.453.0",
-    "next": "15.0.1",
+    "markdown-it": "^14.1.0",
+    "next": "^15.0.2-canary.9",
     "next-auth": "^5.0.0-beta.25",
     "next-sanity": "^9.8.3-canary.1",
     "react": "19.0.0-rc-69d4b800-20241021",
@@ -34,9 +38,11 @@
     "sanity": "^3.62.2",
     "sanity-plugin-markdown": "^5.0.0",
     "server-only": "^0.0.1",
+    "slugify": "^1.6.6",
     "styled-components": "^6.1.13",
     "tailwind-merge": "^2.5.4",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/markdown-it": "^14.1.2",

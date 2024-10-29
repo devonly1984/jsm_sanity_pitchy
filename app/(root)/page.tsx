@@ -1,3 +1,4 @@
+import { auth } from "@/auth";
 import StartupCard from "@/components/cards/StartupCard";
 import SearchForm from "@/components/forms/SearchForm";
 import { StartupCardType } from "@/lib/types";
@@ -12,6 +13,8 @@ const Home = async ({
   const query = (await searchParams).query
   const params = { search: query || null };
 //const posts = await client.fetch(STARTUP_QUERY);
+const session = await auth();
+console.log(session?.id);
 const { data: posts } = await sanityFetch({ query: STARTUP_QUERY,params });
 console.log(JSON.stringify(posts, null, 2));  return (
   <div>
